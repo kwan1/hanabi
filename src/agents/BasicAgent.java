@@ -15,11 +15,11 @@ import hanabAI.*;
  **/
 public class BasicAgent implements Agent{
 
-  private Colour[] colours;
-  private int[] values;
+  private Colour[] colours; // colours of cards
+  private int[] values; // values of cards
   private boolean firstAction = true;
-  private int numPlayers;
-  private int index;
+  private int numPlayers; // number of players playing the game
+  private int index;//index of card in an array?
 
   /**
    * Default constructor, does nothing.
@@ -55,7 +55,7 @@ public class BasicAgent implements Agent{
    * Assumes that they are the player to move.
    * The strategy will 
    * a) play a card if a card is known to be playable,
-   * b) discard a card if a card is known to be useless
+   * b) discard a card if a card is known to be useless( has less weight)
    * c) give a number hint to the next player with a playable card (0.1 per hint token)
    * d) give a colour hint to the next player with a playable card (0.1 per hint token)
    * e) play a potential card (0.1 per fuse token)
